@@ -6,16 +6,33 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent))]
 public class MoveToDestination : MonoBehaviour
 {
-    public Transform goal;
+    public Transform[] goals;
+
+    private int _currentDestinationIndex = -1;
+    private NavMeshAgent _agent;
     
     private void Start()
     {
-        if (goal == null)
+        _agent = GetComponent<NavMeshAgent>();
+        NextDestination();
+    }
+
+    private void NextDestination()
+    {
+        if (_currentDestinationIndex >= goals.Length - 1)
         {
             return;
         }
-        
-        var agent = GetComponent<NavMeshAgent>();
-        agent.destination = goal.position;
+
+        _currentDestinationIndex += 1;
+        _agent.destination = goals[_currentDestinationIndex].position;
+    }
+
+    void Update()
+    {
+        if (!_agent.pathPending && _agent.remainingDistance < 0.5f)
+        {
+            NextDestination();
+        }
     }
 }
