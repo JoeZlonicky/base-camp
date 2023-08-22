@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7ce13ea9504d8640bf60bd7dde03605, type: 3}
+  m_Name: New Narrative
+  m_EditorClassIdentifier: 
+  nodeLinks:
+  - baseNodeGuid: 5b8be727-b747-4f33-9bc0-e0748e983335
+    portName: Next
+    targetNodeGuid: cbe0fd39-4af2-4912-80b8-66293fcac478
+  - baseNodeGuid: cbe0fd39-4af2-4912-80b8-66293fcac478
+    portName: Choice 0
+    targetNodeGuid: ad69b0f5-366d-46e3-b790-e5e8c894174d
+  - baseNodeGuid: cbe0fd39-4af2-4912-80b8-66293fcac478
+    portName: Choice 1
+    targetNodeGuid: 5c939c1f-05a0-4497-8cd3-aa63e09bf44e
+  dialogueNodeData:
+  - guid: ad69b0f5-366d-46e3-b790-e5e8c894174d
+    dialogueText: Some other text
+    position: {x: 685, y: 188}
+  - guid: cbe0fd39-4af2-4912-80b8-66293fcac478
+    dialogueText: Some really really long text
+    position: {x: 332, y: 213}
+  - guid: 5c939c1f-05a0-4497-8cd3-aa63e09bf44e
+    dialogueText: Dialogue Node
+    position: {x: 685, y: 285}

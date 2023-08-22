@@ -1,0 +1,10 @@
+GridBackground {
+    --grid-background-color: #212121;
+    --line-color: rgba(255, 255, 255, 0.05);
+    --thick-line-color: rgba(255, 255, 255, 0.1);
+    --spacing: 25;
+}
+
+.DialogueChoiceTextField > TextInput > TextElement {
+    flex-grow: 0
+}
